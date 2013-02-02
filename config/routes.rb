@@ -1,4 +1,12 @@
 DemoApp::Application.routes.draw do
+  get "landing_pages/home"
+
+  get "landing_pages/privacy"
+
+  get "landing_pages/addlisting"
+
+  get "landing_pages/view"
+
   resources :listings
 
 

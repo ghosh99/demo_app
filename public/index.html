@@ -1,241 +1,155 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--4c50ba82-6b09-11e2-8e12-12313e02a4f0 a-->
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="//unbouncepages-com.s3.amazonaws.com/www.tradewinz.co/sharespace1/reset.css" media="screen" rel="stylesheet" type="text/css">
+<link href="//unbouncepages-com.s3.amazonaws.com/www.tradewinz.co/sharespace1/page_defaults.css" media="screen" rel="stylesheet" type="text/css">
+<style title="page-styles" type="text/css">body { color: rgb(0, 0, 0) }
+a { color: rgb(0, 0, 255); text-decoration: none }
+*#lp-pom-button-48 { background-image: url(//unbouncepages-com.s3.amazonaws.com/www.tradewinz.co/sharespace1/1h0qd5w-addlisting.png); color: rgb(255, 255, 255); border-style: none; font-size: 14px; line-height: 17px; text-align: center; background-repeat: no-repeat }
+*#lp-pom-button-48:hover { color: rgb(255, 255, 255) }
+</style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var lp = lp || {};
+lp.jQuery = jQuery.noConflict( true );
+</script>
 
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-
-
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("assets/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-      .filename {
-        font-style: italic;
-      }
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
-              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove <span class="filename">public/index.html</span></h2>
-              <p>Routes are set up in <span class="filename">config/routes.rb</span>.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
+<script src="//d2xxq4ijfwetlm.cloudfront.net/m/lp-webapp/0.0.9/lp-text/2.1/main.js" type="text/javascript"></script>
+<script src="//d2xxq4ijfwetlm.cloudfront.net/m/lp-webapp/0.0.9/lp-button/2.0/main.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+</head>
+<body class="lp-pom-body">
+<div class="lp-element lp-pom-root" id="lp-pom-root" style="background: #a09b96; margin: auto; position: relative; min-width: 980px;">
+<div class="lp-positioned-content" style="width: 980px; margin-left: -490px;">
+<div class="lp-element lp-pom-text" id="lp-pom-text-11" style="left:15px;top:319px;left:15px;top:319px;left:15px;top:319px;position:absolute;left:15px;top:319px;z-index:1;width:445px;height:43px;">
+<p xmlns="" style="text-align: center;">
+<span style="font-size:36px;line-height:43px;"><span style="font-family: helvetica,sans-serif;">Share work space.<br>
+</span></span>
+</p>
+</div>
+<div class="lp-element lp-pom-text" id="lp-pom-text-17" style="left:15px;top:365px;left:15px;top:365px;left:15px;top:365px;position:absolute;left:15px;top:365px;z-index:2;width:445px;height:60px;">
+<p style="text-align: center;">
+<span style="color:#808080;"><span style="font-size: 20px; line-height: 30px;">Tradewinz connects small businesses<br>
+  who want to rent or swap work space<br>
+</span></span>
+</p>
+</div>
+<div class="lp-element lp-pom-text" id="lp-pom-text-21" style="left:22px;top:569px;left:22px;top:569px;left:22px;top:569px;position:absolute;left:22px;top:569px;z-index:3;width:430px;height:311px;">
+<p style="font-size:14px;line-height:21px;">
+<a href="clkg/https/intuitcorp.quickbase.com/db/bhueng3q4?a=dr&rid=71&rl=hwz" target="_blank"><span style="font-size:14px;line-height:17px;">2200 sq ft Photography Studio (includes lighting)</span></a>
+<br>
+<span style="color:#696969;">For Rent in Hayward, CA</span>
+</p>
+<p style="font-size:14px;line-height:21px;">
+<span style="font-size:14px;line-height:17px;"><a href="clkg/https/intuitcorp.quickbase.com/db/bhueng3q4?a=dr&rid=63&rl=t2y" target="_blank">6800 sq ft Hip Designer Office in SOMA (Private Office or Desks)</a></span>
+<br>
+<span style="color:#696969;">For Rent in San Francisco, CA</span>
+</p>
+<p style="font-size:14px;line-height:21px;">
+<a href="clkg/https/intuitcorp.quickbase.com/db/bhueng3q4?a=dr&rid=77&rl=hwz" target="_blank"><span style="font-size:14px;line-height:17px;">2200 sq ft Commercial Kitchen Share (hourly or full time)</span></a>
+<br>
+<span style="color:#696969;">For Rent in Alameda, CA</span>
+</p>
+<p style="font-size:14px;line-height:21px;">
+<a href="clkg/https/intuitcorp.quickbase.com/db/bhueng3q4?a=dr&rid=68&rl=iia" target="_blank"><span style="font-size:14px;line-height:17px;">Two 100 sq ft Wellness Rooms in Office with 2 Chiropractors</span></a>
+<br>
+<span style="color:#696969;">For Rent in Lake Merritt, CA</span>
+</p>
+<p style="font-size:14px;line-height:21px;">
+<a href="clkg/https/intuitcorp.quickbase.com/db/bhueng3q4?a=dr&rid=62&rl=iai" target="_blank"><span style="font-size:14px;line-height:17px;">150 sq ft Private Office on Union St</span></a>
+<br>
+<span style="color:#696969;">For Rent in San Francisco, CA</span>
+</p>
+<p style="font-size:14px;line-height:21px;">
+<a href="clkn/https/intuitcorp.quickbase.com/db/bhueng3n7" target="_blank"><span style="color:#000;"><span style="font-size: 14px; line-height: 17px;">View All<br>
+</span></span></a>
+</p>
+</div>
+<div class="lp-element lp-pom-text" id="lp-pom-text-22" style="left:22px;top:525px;left:22px;top:525px;left:22px;top:525px;position:absolute;left:22px;top:525px;z-index:4;width:463px;height:22px;">
+<p>
+<span style="font-size:18px;line-height:22px;"><strong>Spaces Available</strong>
+<br>
+</span>
+</p>
+</div>
+<div class="lp-element lp-pom-text" id="lp-pom-text-34" style="left:20px;top:26px;left:20px;top:26px;left:20px;top:26px;position:absolute;left:20px;top:26px;z-index:5;width:102px;height:26px;">
+<p>
+<span style="font-size:22px;line-height:26px;"><span style="color: rgb(0, 0, 0);"><strong><span style="font-family: arial,helvetica,sans-serif;">tradewinz</span></strong></span></span>
+</p>
+</div>
+<div class="lp-element lp-pom-text" id="lp-pom-text-45" style="left:499px;top:525px;left:499px;top:525px;left:499px;top:525px;position:absolute;left:499px;top:525px;z-index:6;width:300px;height:22px;">
+<p>
+<span style="font-size:18px;line-height:22px;"><strong>Spaces Requested<br>
+</strong></span>
+</p>
+</div>
+<div class="lp-element lp-pom-text" id="lp-pom-text-46" style="left:499px;top:569px;left:499px;top:569px;left:499px;top:569px;position:absolute;left:499px;top:569px;z-index:7;width:430px;height:75px;">
+<p style="font-size:14px;line-height:21px;">
+<a href="clkg/https/intuitcorp.quickbase.com/db/bhueng3q4?a=dr&r=cq" target="_blank"><span style="font-size:14px;line-height:17px;">200 sq ft Personal Office with Window &amp; Lock Wanted</span></a>
+<br>
+<span style="color:#696969;">For Rent in Larkspur/San Anselmo/Ross, CA</span>
+</p>
+<p>
+<a href="clkn/https/intuitcorp.quickbase.com/db/bhueng3n7" target="_blank"><span style="color:#000;"><span style="font-size: 14px; line-height: 17px;">View All</span></span></a>
+</p>
+</div>
+<div class="lp-element lp-pom-image" id="lp-pom-image-47" style="left:0px;top:77px;left:0px;top:77px;left:0px;top:77px;position:absolute;left:0px;top:77px;z-index:8;width:980px;height:180px;">
+<img src="//unbouncepages-com.s3.amazonaws.com/www.tradewinz.co/sharespace1/a9cmjd-spaces.png" alt=""></div>
+<a class="lp-element lp-pom-button" href="clkg/https/intuitcorp.quickbase.com/db/bhueng3q4?a=nwr" target="" id="lp-pom-button-48" style="left:497px;top:377px;left:497px;top:377px;left:497px;top:377px;position:absolute;left:497px;top:377px;z-index:9;width:243px;height:50px;"><span class="label" style="margin-top: 0px;"></span></a>
+<div class="lp-element lp-pom-text" id="lp-pom-text-69" style="position:absolute;left:17px;top:1004px;z-index:10;width:949px;height:17px;">
+<p style="text-align: center;">
+<span style="color:#808080;"><span style="font-size: 12px; line-height: 14px;">&copy;2013 Intuit, Inc. All rights reserved.<br>
+</span></span>
+</p>
+</div>
+<div class="lp-element lp-pom-text" id="lp-pom-text-70" style="position:absolute;left:128px;top:33px;z-index:11;width:300px;height:17px;">
+<p>
+<span style="font-size:12px;line-height:14px;"><span style="color: rgb(105, 105, 105);">by Intuit Labs</span></span>
+</p>
+</div>
+<div class="lp-element lp-pom-text" id="lp-pom-text-72" style="position:absolute;left:865px;top:33px;z-index:12;width:98px;height:17px;">
+<p style="text-align: right;">
+<span style="color:#000;"><a href="clkg/http/security.intuit.com/privacy/" target="_blank"><span style="font-size: 12px; line-height: 14px;">Privacy Terms</span></a></span>
+</p>
+</div>
+<div class="lp-element lp-pom-text" id="lp-pom-text-74" style="position:absolute;left:497px;top:325px;z-index:13;width:465px;height:42px;">
+<p style="line-height: 21px;">
+  List the space you have to share or are seeking.&nbsp;<br>
+<span style="color:#808080;">(Free - no listing or transaction fees)</span>
+</p>
+</div>
+<div class="lp-element lp-pom-text" id="lp-pom-text-81" style="position:absolute;left:22px;top:945px;z-index:14;width:434px;height:17px;">
+<p>
+  Questions or feedback? Send a note to the <a href="mailto:tradewinz@intuit.com?subject=Feedback">Tradewinz team</a>.</p>
+</div>
+</div>
+<div class="lp-element lp-pom-block" id="lp-pom-block-8" style="background: #dbdad9; margin: auto; position: relative; width: 980px; height: 77px;">
+<div class="lp-pom-block-content" style="margin: 0; width: 100%; height: 100%;"></div>
+</div>
+<div class="lp-element lp-pom-block" id="lp-pom-block-37" style="background: #fff; margin: auto; position: relative; width: 980px; height: 180px;">
+<div class="lp-pom-block-content" style="margin: 0; width: 100%; height: 100%;"></div>
+</div>
+<div class="lp-element lp-pom-block" id="lp-pom-block-9" style="background: #f6f6f5; margin: auto; position: relative; width: 980px; height: 234px;">
+<div class="lp-pom-block-content" style="margin: 0; width: 100%; height: 100%;"></div>
+</div>
+<div class="lp-element lp-pom-block" id="lp-pom-block-10" style="background: #ebebe8; margin: auto; position: relative; width: 980px; height: 436px;">
+<div class="lp-pom-block-content" style="margin: 0; width: 100%; height: 100%;"></div>
+</div>
+<div class="lp-element lp-pom-block" id="lp-pom-block-80" style="background: #fff; margin: auto; position: relative; width: 980px; height: 51px;">
+<div class="lp-pom-block-content" style="margin: 0; width: 100%; height: 100%;"></div>
+</div>
+<div class="lp-element lp-pom-block" id="lp-pom-block-82" style="background: #a09b96; margin: auto; position: relative; width: 980px; height: 1px;">
+<div class="lp-pom-block-content" style="margin: 0; width: 100%; height: 100%;"></div>
+</div>
+<div class="lp-element lp-pom-block" id="lp-pom-block-68" style="background: #ebebe8; margin: auto; position: relative; width: 980px; height: 68px;">
+<div class="lp-pom-block-content" style="margin: 0; width: 100%; height: 100%;"></div>
+</div>
+</div>
+</body>
 </html>
