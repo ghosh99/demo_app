@@ -83,21 +83,22 @@
        	<img src="../assets/tradewinz-spaces.png" alt="">
        	<hr>
         <p>List the space you have to share. Its Free to list and rent !<p>
-        <a class="btn btn-large btn-success" href="http://tradewinz2.herokuapp.com/listings/new">LIST YOUR SPACE</a>
+        <a class="btn btn-large btn-success" href= <%= new_listing_path %> >LIST YOUR SPACE</a>
+
       </div>
 
       <hr>
 
       <div class="row-fluid marketing">
         <div class="span6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        	<% @listings = Listing.all %>
+        	<% @listings.each do |listing| %>
+        	
+          	<h4><%= listing.headline %></h4>
+          	<p><%= listing.description %></p>
+			<%= link_to 'Show', listing %></td>
+			
+			<% end %>          
         </div>
 
         <div class="span6">
