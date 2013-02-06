@@ -1,10 +1,12 @@
-<h1>Listing listings</h1>
+<div class="container">
+
+<h2>Listings</h2>
 
 <table>
   <tr>
+    <th>Headline</th>
     <th>Description</th>
     <th>Location</th>
-    <th>Headline</th>
     <th>User</th>
     <th></th>
     <th></th>
@@ -13,9 +15,9 @@
 
 <% @listings.each do |listing| %>
   <tr>
+    <td><%= listing.headline %></td>
     <td><%= listing.description %></td>
     <td><%= listing.location %></td>
-    <td><%= listing.headline %></td>
     <td><%= listing.user_id %></td>
     <td><%= link_to 'Show', listing %></td>
     <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
@@ -27,3 +29,5 @@
 <br />
 
 <%= link_to 'New Listing', new_listing_path %>
+
+</div>
