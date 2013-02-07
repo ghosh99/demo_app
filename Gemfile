@@ -23,4 +23,3 @@ group :production do
 end
 
 gem "carrierwave"
-
