@@ -1,6 +1,6 @@
 <link href="../assets/bootstrap.css" rel="stylesheet">
 
-<div class="container">
+<div class="container-narrow">
 
 <p id="notice"><%= notice %></p>
 
@@ -18,6 +18,12 @@
   <div class="span2"><strong>Location:</strong></div>
   <div class="span10"><%= @listing.location %></div>
 </div>
+<br>
+<div class="row">
+  <div class="span2"><strong>Image:</strong></div>
+  <div class="span10"><%= image_tag @listing.image_url.to_s %></div>
+</div>
+<br>
 <br>
 <div class="row">
   <div class="span2"><strong>User:</strong></div>

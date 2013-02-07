@@ -1,12 +1,15 @@
-<div class="container">
+<div class="container-narrow">
 
-<h2>Listings</h2>
+<h2>View all listings</h2>
+
+<hr>
 
 <table>
   <tr>
     <th>Headline</th>
     <th>Description</th>
     <th>Location</th>
+    <th>Picture<th> 
     <th>User</th>
     <th></th>
     <th></th>
@@ -18,6 +21,8 @@
     <td><%= listing.headline %></td>
     <td><%= listing.description %></td>
     <td><%= listing.location %></td>
+    <td><%= image_tag listing.image_url.to_s %></td>
+
     <td><%= listing.user_id %></td>
     <td><%= link_to 'Show', listing %></td>
     <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
