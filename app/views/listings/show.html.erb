@@ -27,11 +27,17 @@
 <br>
 <div class="row">
   <div class="span2"><strong>User:</strong></div>
-  <div class="span10"><%= @listing.user_id %></div>
+  <div class="span10"><%= @listing.user.name %></div>
 </div>
+
 <br>
 
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>
+
+<br>
+<br> 
+
+<a class="btn btn-medium" href= <%= listings_path %> >View All Listings</a>
 
 <div>

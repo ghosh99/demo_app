@@ -22,12 +22,14 @@
         	
           	<h4><%= listing.headline %></h4>
           	<p><%= listing.description %></p>
-			<%= link_to 'Show', listing %></td>
+			<%= link_to 'View', listing %></td>
 
 			<% end %>          
         </div>
         
       </div>
+		
+	<a class="btn btn-medium" href= <%= listings_path %> >View All Listings</a>
 
 
     </div> <!-- /container -->
