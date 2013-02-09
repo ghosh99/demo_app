@@ -7,6 +7,6 @@ class Listing < ActiveRecord::Base
 
   validates :headline, :length => { :maximum => 140 }
 
-  validates :description, :length => { :maximum => 254 }
+  validates :description, :length => { :maximum => 255 }
 
 end

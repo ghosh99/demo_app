@@ -5,9 +5,6 @@ class LandingPagesController < ApplicationController
   def privacy
   end
 
-  def addlisting
-  end
-
   def view
   end
 end

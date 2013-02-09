@@ -1,11 +1,11 @@
 DemoApp::Application.routes.draw do
-  get "landing_pages/home"
 
-  get "landing_pages/privacy"
+  match '/home', to: 'landing_pages#home'
 
-  get "landing_pages/addlisting"
+  match '/about', to: 'landing_pages#view'
 
-  get "landing_pages/view"
+  match '/contact', to:'landing_pages#privacy'
+
 
   resources :listings
 

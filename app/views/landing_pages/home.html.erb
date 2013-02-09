@@ -1,42 +1,41 @@
 
+<div class="container-narrow">      
 
-    <div class="container-narrow">      
+  <div class="jumbotron">
+    <h2>Share work space</h2>
+    <h3 class="lead">Tradewinz conects small businesses who want to share work space with other small businesses</h3>
+    <%= image_tag("tradewinz-spaces.png", alt: "tradewinz-spaces") %>
+   	<hr>    
+    <p>List the space you have to share. Its Free to list and rent.<p>
+    <%= link_to "LIST YOUR SPACE", new_listing_path, class: "btn btn-large btn-success" %>	
+  </div>
 
-      <div class="jumbotron">
-        <h2>Share work space</h2>
-        <h3 class="lead">Tradewinz conects small businesses who want to share work space with other small businesses</h3>
-       	<img src="../assets/tradewinz-spaces.png" alt="">
-       	<hr>
-        <p>List the space you have to share. Its Free to list and rent !<p>
-        <a class="btn btn-large btn-success" href= <%= new_listing_path %> >LIST YOUR SPACE</a>
+  <hr>
+  <div class="row-fluid marketing">
+    <h3> Recent Listings </h3>
+    <div class="span12">
+    	<% @listings = Listing.all %>
+    	<% @listings.each do |listing| %>
+    	
+      	<h4><%= listing.headline %></h4>
+      	<p><%= listing.description %></p>
+		<%= link_to 'View', listing %></td>
 
-      </div>
+		<% end %>          
+    </div> 
+    <div class="span12">
+    	<hr>
+        <%= link_to "View All", listings_path, class: "btn btn-medium" %>	
+	</div>
 
-      <hr>
+  </div>
+	
 
-      <div class="row-fluid marketing">
-        <h3> Recent Listings </h3>
-        <div class="span12">
-        	<% @listings = Listing.all %>
-        	<% @listings.each do |listing| %>
-        	
-          	<h4><%= listing.headline %></h4>
-          	<p><%= listing.description %></p>
-			<%= link_to 'View', listing %></td>
+</div> <!-- /container -->
 
-			<% end %>          
-        </div>
-        
-      </div>
-		
-	<a class="btn btn-medium" href= <%= listings_path %> >View All Listings</a>
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../assets/jquery.js"></script>
+<script src="../assets/bootstrap.js"></script>
 
-
-    </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/jquery.js"></script>
-    <script src="../assets/bootstrap.js"></script>
-    
