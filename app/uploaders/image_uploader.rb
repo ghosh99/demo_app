@@ -11,8 +11,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include Sprockets::Helpers::IsolatedHelper
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
+  #storage :file
+  storage :fog
+
+  # Sets this minetype of the image to set the correct type if not sepcified.
+  include CarrierWave::MimeTypes
+  process :set_content_type
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -26,7 +30,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   # asset_path("images/" + [version_name, "rails.png"].compact.join('_'))
   #
      "/assets/" + [version_name, "rails.png"].compact.join('_')
-  #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   end
 
   # Process files as they are uploaded:
