@@ -21,7 +21,7 @@
     <td><%= listing.headline %></td>
     <td><%= listing.description %></td>
     <td><%= listing.location %></td>
-    <td><%= image_tag listing.image_url.to_s, alt: "Picture" %></td>
+    <td><%= image_tag listing.image_url(:thumb).to_s, alt: "Picture" %></td>
 
     <td><%= listing.user.name %></td>
     <td><%= link_to 'View', listing %>|</td>
