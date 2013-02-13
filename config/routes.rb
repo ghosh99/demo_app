@@ -1,5 +1,8 @@
 DemoApp::Application.routes.draw do
 
+  resources :offices
+
+
   match '/home', to: 'landing_pages#home'
 
   match '/about', to: 'landing_pages#view'

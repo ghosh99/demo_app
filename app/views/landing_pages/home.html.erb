@@ -7,17 +7,17 @@
     <%= image_tag("tradewinz-spaces.png", alt: "tradewinz-spaces") %>
    	<hr>    
     <p>List the space you have to share. Its Free to list and rent.<p>
-    <%= link_to "LIST YOUR SPACE", new_listing_path, class: "btn btn-large btn-success" %>	
+    <%= link_to "LIST YOUR SPACE", new_office_path, class: "btn btn-large btn-success" %>	
   </div>
 
   <hr>
   <div class="row-fluid marketing">
     <h3> Recent Listings </h3>
     <div class="span12">
-    	<% @listings = Listing.all %>
+    	<% @listings = Office.all %>
     	<% @listings.each do |listing| %>
     	
-      	<h4><%= listing.headline %></h4>
+      	<h4><%= listing.title %></h4>
       	<p><%= listing.description %></p>
 		<%= link_to 'View', listing %></td>
 
@@ -25,14 +25,10 @@
     </div> 
     <div class="span12">
     	<hr>
-        <%= link_to "View All", listings_path, class: "btn btn-medium" %>	
+        <%= link_to "View All", offices_path, class: "btn btn-medium" %>	
 	</div>
 
   </div>
 	
 
 </div> <!-- /container -->
-
-<!-- Le javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->

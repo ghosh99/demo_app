@@ -1,0 +1,103 @@
+<div class="container-narrow">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Rent:</b>
+  <%= @office.rent %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @office.size %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @office.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @office.description %>
+</p>
+
+<p>
+  <b>Availability:</b>
+  <%= @office.availability %>
+</p>
+
+<p>
+  <b>Insurance:</b>
+  <%= @office.insurance %>
+</p>
+
+<p>
+  <b>Swap:</b>
+  <%= @office.swap %>
+</p>
+
+<p>
+  <b>Image1:</b>
+  <%= @office.image1 %>
+</p>
+
+<p>
+  <b>Image2:</b>
+  <%= @office.image2 %>
+</p>
+
+<p>
+  <b>Image3:</b>
+  <%= @office.image3 %>
+</p>
+
+<p>
+  <b>Image4:</b>
+  <%= @office.image4 %>
+</p>
+
+<p>
+  <b>Contact name:</b>
+  <%= @office.contact_name %>
+</p>
+
+<p>
+  <b>Contact picture:</b>
+  <%= @office.contact_picture %>
+</p>
+
+<p>
+  <b>Company desc:</b>
+  <%= @office.company_desc %>
+</p>
+
+<p>
+  <b>Company url:</b>
+  <%= @office.company_url %>
+</p>
+
+<p>
+  <b>Years:</b>
+  <%= @office.years %>
+</p>
+
+<p>
+  <b>Contact email:</b>
+  <%= @office.contact_email %>
+</p>
+
+<p>
+  <b>Contact phone:</b>
+  <%= @office.contact_phone %>
+</p>
+
+<br>
+<%= link_to 'Edit', edit_office_path(@office) %> |
+<%= link_to 'Back', offices_path %>
+
+<hr> 
+
+<%= link_to "View all listings", offices_path, class: "btn btn-medium" %>
+
+</div>
