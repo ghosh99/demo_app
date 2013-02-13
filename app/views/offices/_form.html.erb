@@ -44,19 +44,25 @@
             <div class="controls"> <%= f.date_select :availability %> </div>
           </div>
 
-<div class="control-group">
-            <label class="control-label">Liability insurance? </label>
-            <div class="controls"> <%= f.check_box :insurance %> </div>
+          <div class="control-group">
+            <label class="control-label">Upload a photo</label>
+            <div class="controls"> <%= f.file_field :image1 %> </div>
           </div>
 
           <div class="control-group">
-            <label class="control-label">Swap places?</label>
-            <div class="controls"> <%= f.check_box :swap %> </div>
-          </div>
-
-          <div class="control-group">
-            <label class="control-label"> <%= f.label :image1 %> </label>
-            <div class="controls"> <%= f.text_field :image2 %> </div>
+            <label class="control-label">Options </label>
+            <div class="controls">
+              <div class="row">
+                <div class="span3">
+                    <label class="control-label">Liability insurance?  </label>
+                    <%= f.check_box :insurance %>
+                </div>
+                <div class="span3">  
+                  <label class="control-label">Swap places?  </label>
+                  <%= f.check_box :swap %> 
+                </div>
+              </div>
+            </div>
           </div>
 
           <!--div class="field">
@@ -72,38 +78,63 @@
             <%= f.text_field :image4 %>
           </div-->
 
-          <div class="field">
-            <%= f.label :contact_name %><br />
-            <%= f.text_field :contact_name %>
-          </div>
-          <div class="field">
-            <%= f.label :contact_picture %><br />
-            <%= f.text_field :contact_picture %>
-          </div>
-          <div class="field">
-            <%= f.label :company_desc %><br />
-            <%= f.text_area :company_desc %>
-          </div>
-          <div class="field">
-            <%= f.label :company_url %><br />
-            <%= f.text_field :company_url %>
-          </div>
-          <div class="field">
-            <%= f.label :years %><br />
-            <%= f.number_field :years %>
-          </div>
-          <div class="field">
-            <%= f.label :contact_email %><br />
-            <%= f.text_field :contact_email %>
-          </div>
-          <div class="field">
-            <%= f.label :contact_phone %><br />
-            <%= f.text_field :contact_phone %>
-          </div>
-          <div class="actions">
-            <%= f.submit %>
-          </div>
-        <% end %>
+      </fieldset> 
+
+      <div class="panel-header-gray">
+        <h3> Shown only to confirmed tenants</h3>
+        <p> To protect your privacy, we hide your address, phone number, and contact information from people that have not confirmed a reservation with you
+        </p>
+      </div>
+      
+      <fieldset class="padtop">
+        <div class="control-group">
+          <label class="control-label">Company Name </label>
+          <div class="controls"> <%= f.text_field :contact_name %> </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Company Details </label>
+          <div class="controls"> <%= f.text_area :company_desc %> </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Company Website </label>
+          <div class="controls"> <%= f.text_field :company_url %> </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Years in business </label>
+          <div class="controls"> <%= f.number_field :years %></div>
+        </div>
+
+        <!--div class="control-group">
+          <label class="control-label">Upload your picture</label>
+          <div class="controls"> <%= f.file_field :contact_picture %> </div>
+        </div-->
+        
+        <div class="control-group">
+          <label class="control-label">Email address </label>
+          <div class="controls"> <%= f.text_field :contact_email %> </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Phone Number </label>
+          <div class="controls"> <%= f.text_field :contact_phone %> </div>
+        </div>
+
+        
       </fieldset>
 
+      <div class="panel-header-gray">
+        <div class="row">
+            <div class="span12 jumbotron">
+                <%= f.submit "Save and Continue", :class => "btn btn-large btn-success" %>
+              <!--input id="post_room_submit_button" class="btn green" type="submit" value="Save & Continue"-->
+            </div>
+          </div>
       </div>
+        
+  <% end %>
+
+
+</div>

@@ -1,4 +1,3 @@
-<div class="container-narrow">
 
 <p id="notice"><%= notice %></p>
 
@@ -27,6 +26,12 @@
   <%= @office.availability %>
 </p>
 
+
+<p>
+  <b>Picture:</b>
+  <%= image_tag @office.image1_url.to_s, alt: "Picture" %>
+</p>
+
 <p>
   <b>Insurance:</b>
   <%= @office.insurance %>
@@ -37,25 +42,6 @@
   <%= @office.swap %>
 </p>
 
-<p>
-  <b>Image1:</b>
-  <%= @office.image1 %>
-</p>
-
-<p>
-  <b>Image2:</b>
-  <%= @office.image2 %>
-</p>
-
-<p>
-  <b>Image3:</b>
-  <%= @office.image3 %>
-</p>
-
-<p>
-  <b>Image4:</b>
-  <%= @office.image4 %>
-</p>
 
 <p>
   <b>Contact name:</b>
@@ -99,5 +85,3 @@
 <hr> 
 
 <%= link_to "View all listings", offices_path, class: "btn btn-medium" %>
-
-</div>

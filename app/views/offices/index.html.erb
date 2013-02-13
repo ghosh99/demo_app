@@ -4,13 +4,13 @@
 
 <table>
   <tr>
-    <th>Title |</th>    
-    <th>Rent |</th>
-    <th>Availability |</th>
-    <th>Contact name |</th>
-    <th>Contact picture |</th>
-    <th>Contact email |</th>
-    <th>Contact phone</th>
+    <th>Title </th>    
+    <th>Rent </th>
+    <th>Availability </th>
+    <th>Name </th>
+    <th>Photo</th>
+    <th>Email </th>
+    <th>Phone</th>
     <th></th>
     <th></th>
     <th></th>
@@ -24,8 +24,8 @@
     <td><%= office.availability %></td>
     
     <td><%= office.contact_name %></td>
-    <td><%= office.contact_picture %></td>
-    
+    <td><%= image_tag office.image1_url(:thumb).to_s, alt: "Photo" %></td>
+
     <td><%= office.contact_email %></td>
     <td><%= office.contact_phone %></td>
     
