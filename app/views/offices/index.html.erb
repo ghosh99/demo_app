@@ -7,10 +7,12 @@
     <th>Title </th>    
     <th>Rent </th>
     <th>Availability </th>
+    <th>Room photo</th>
+
     <th>Name </th>
-    <th>Photo</th>
     <th>Email </th>
     <th>Phone</th>
+    <th>Picture</th>
     <th></th>
     <th></th>
     <th></th>
@@ -22,13 +24,14 @@
     <td><%= office.rent %></td>
     
     <td><%= office.availability %></td>
-    
-    <td><%= office.contact_name %></td>
-    <td><%= image_tag office.image1_url(:thumb).to_s, alt: "Photo" %></td>
+    <td><%= image_tag office.image1_url(:medium).to_s, alt: "Photo" %></td>
 
+    <td><%= office.contact_name %></td>
     <td><%= office.contact_email %></td>
     <td><%= office.contact_phone %></td>
     
+    <td><%= image_tag office.contact_picture_url(:thumb).to_s, alt: "Picture" %></td>
+
     <td><%= link_to 'View', office %></td>
     <td><%= link_to 'Edit', edit_office_path(office) %></td>
     <td><%= link_to 'Delete', office, method: :delete, data: { confirm: 'Are you sure?' } %></td>

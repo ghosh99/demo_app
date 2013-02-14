@@ -28,8 +28,8 @@
 
 
 <p>
-  <b>Picture:</b>
-  <%= image_tag @office.image1_url.to_s, alt: "Picture" %>
+  <b>Room Photo:</b>
+  <%= image_tag @office.image1_url.to_s, alt: "Photo" %>
 </p>
 
 <p>
@@ -42,15 +42,14 @@
   <%= @office.swap %>
 </p>
 
+<p>
+  <b>Contact picture:</b>
+  <%= image_tag @office.contact_picture_url(:medium).to_s, alt: "Picture" %>
+</p>
 
 <p>
   <b>Contact name:</b>
   <%= @office.contact_name %>
-</p>
-
-<p>
-  <b>Contact picture:</b>
-  <%= @office.contact_picture %>
 </p>
 
 <p>
