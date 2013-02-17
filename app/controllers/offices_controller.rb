@@ -1,4 +1,5 @@
 class OfficesController < ApplicationController
+
   # GET /offices
   # GET /offices.json
   def index
@@ -44,6 +45,9 @@ class OfficesController < ApplicationController
 
     respond_to do |format|
       if @office.save
+        # send email to user on successful office create
+        OfficeMailer.listing_confirm(@office).deliver
+
         format.html { redirect_to @office, notice: 'Office was successfully created.' }
         format.json { render json: @office, status: :created, location: @office }
       else

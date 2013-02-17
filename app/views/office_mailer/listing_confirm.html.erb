@@ -1,0 +1,7 @@
+
+<p><%= @office.contact_name %>,</p>
+
+<p>Thank you for listing your office with Tradewinz!</p>
+
+<p><%= link_to 'View your listing', office_url(@office, :host => "localhost:3000") %></p>
+<p><%= link_to "Edit your listing", edit_office_url(@office, :host => "localhost:3000") %></p>
