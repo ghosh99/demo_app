@@ -33,8 +33,8 @@
     <td><%= image_tag office.contact_picture_url(:thumb).to_s, alt: "Picture" %></td>
 
     <td><%= link_to 'View', office %></td>
-    <!--td><%= link_to 'Edit', edit_office_path(office) %></td>
-    <td><%= link_to 'Delete', office, method: :delete, data: { confirm: 'Are you sure?' } %></td-->
+    <td><%= link_to 'Edit', edit_office_path(office) %></td>
+    <td><%= link_to 'Delete', office, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
