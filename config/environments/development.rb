@@ -13,6 +13,11 @@ DemoApp::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
+ # Use gmail smtp service for now
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  # specify what domain to use for mailer URLs
+  config.action_mailer.default_url_options = { host: "localhost:3000" }
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
 

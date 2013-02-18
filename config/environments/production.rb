@@ -20,6 +20,9 @@ DemoApp::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # specify what domain to use for mailer URLs
+  config.action_mailer.default_url_options - { host: "www.tradewinz.net" }
+  
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

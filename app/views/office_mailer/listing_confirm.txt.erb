@@ -1,1 +1,6 @@
-Thank you for adding your listing with Tradewinz !
+<%= @office.contact_name %>,
+
+Thank you for listing your office with Tradewinz!
+
+<%= link_to 'View your listing', office_url(@office) %>
+<%= link_to "Edit your listing", edit_office_url(@office) %>
