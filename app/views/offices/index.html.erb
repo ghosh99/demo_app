@@ -1,45 +1,35 @@
 <h2>All Listings</h2>
 
-<hr>
-
-<table>
-  <tr>
-    <th>Title </th>    
-    <th>Rent </th>
-    <th>Availability </th>
-    <th>Room photo</th>
-
-    <th>Name </th>
-    <th>Email </th>
-    <th>Phone</th>
-    <th>Picture</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="offices" class="span12">
 
 <% @offices.each do |office| %>
-  <tr>
-    <td><%= office.title %></td>
-    <td><%= office.rent %></td>
-    
-    <td><%= office.availability %></td>
-    <td><%= image_tag office.image1_url(:medium).to_s, alt: "Photo" %></td>
 
-    <td><%= office.contact_name %></td>
-    <td><%= office.contact_email %></td>
-    <td><%= office.contact_phone %></td>
-    
-    <td><%= image_tag office.contact_picture_url(:thumb).to_s, alt: "Picture" %></td>
+  <div class="row search_result">
 
-    <td><%= link_to 'View', office %></td>
-    <td><%= link_to 'Edit', edit_office_path(office) %></td>
-    <td><%= link_to 'Delete', office, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <div class="span2">
+        <a href= "#">       
+            <%= image_tag office.image1_url(:small).to_s, size: "114x74", alt: "Photo" %>
+        </a>
+    </div>
+
+    <div class="span1">
+        <%= image_tag office.contact_picture_url(:thumb).to_s, :size=>"36x36", alt: "Picture" %>
+    </div>
+
+    <div class="span7"> 
+        <%= link_to office.title, office %>        
+    </div>
+    
+    <div class="span2"> 
+        $ <%= office.rent %> 
+    </div>
+    
+  </div>
+
 <% end %>
-</table>
+<br>
+</div>
 
-<hr>
 <div class="btn btn-medium">
-    <%= link_to 'New Listing', new_office_path %>
+    <%= link_to 'List your place', new_office_path %>
 </div>

@@ -3,7 +3,7 @@ class OfficesController < ApplicationController
   # GET /offices
   # GET /offices.json
   def index
-    @offices = Office.all
+    @offices = Office.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb

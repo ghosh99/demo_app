@@ -48,7 +48,7 @@
 </p>
 
 <p>
-  <b>Contact name:</b>
+  <b>Company name:</b>
   <%= @office.contact_name %>
 </p>
 
@@ -58,29 +58,26 @@
 </p>
 
 <p>
-  <b>Company url:</b>
+  <b>Company website:</b>
   <%= @office.company_url %>
 </p>
 
 <p>
-  <b>Years:</b>
+  <b>Years in business:</b>
   <%= @office.years %>
 </p>
 
-<p>
-  <b>Contact email:</b>
-  <%= @office.contact_email %>
-</p>
+<br>
 
-<p>
-  <b>Contact phone:</b>
-  <%= @office.contact_phone %>
-</p>
+<h4>If you are interested in this listing, please contact the 
+   <a href="mailto:tradewinz@intuit.com?subject=Interested in renting" class="btn-link">Tradewinz team</a>
+</h4>
+
 
 <br>
 <%= link_to 'Edit', edit_office_path(@office) %> |
 <%= link_to 'Back', offices_path %>
-
+<br>
 <hr> 
 
 <%= link_to "View all listings", offices_path, class: "btn btn-medium" %>
