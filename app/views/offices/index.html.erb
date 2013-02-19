@@ -8,12 +8,12 @@
 
     <div class="span2">
         <a href= "#">       
-            <%= image_tag office.image1_url(:small).to_s, size: "114x74", alt: "Photo" %>
+            <%= image_tag office.image1_url(:small).to_s, :class=> "img-polaroid", :size=> "114x74", :alt=> "Photo" %>
         </a>
     </div>
 
     <div class="span1">
-        <%= image_tag office.contact_picture_url(:thumb).to_s, :size=>"36x36", alt: "Picture" %>
+        <%= image_tag office.contact_picture_url(:thumb).to_s, :class=> "img-rounded", :size=>"36x36", alt: "Picture" %>
     </div>
 
     <div class="span7"> 

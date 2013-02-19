@@ -23,12 +23,17 @@
 <div class = "container">
 	<div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li> <%= link_to "Home", home_path, class: "active" %></li>
-          <li><%= link_to "Listings", offices_path %> </li>
-          <li><%= link_to "About", about_path %> </li>
-          <li><%= link_to "Contact", contact_path %> </li>
+          <li> <%= link_to "Home", home_path %></li>
+          <li><%= link_to "See Listings", offices_path %> </li>
+
+          <li><%= link_to "List your Space", owners_path%> </li>
+          <li><%= link_to "How it Works", how_path %> </li>
+          <li><%= link_to "About Us", about_path %> </li>
         </ul>
-        <h3 class="muted">Tradewinz</h3>
+        <a href="/home">
+          <h3 class="muted">Tradewinz from Intuit Labs</h3>
+        </a>
+
   </div>
   <hr>    
 
@@ -36,7 +41,10 @@
 
   <hr>
 	<div class="footer">
-        <p>&copy; Intuit Labs 2013</p>
+      <p>&copy; Intuit, Inc. All rights reserved
+        <a href="http://security.intuit.com/privacy/">Privacy Policy</a>
+      </p>
+
 	</div>
 
 </div>

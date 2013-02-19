@@ -1,17 +1,19 @@
 DemoApp::Application.routes.draw do
 
-  resources :offices
-
-
   match '/home', to: 'landing_pages#home'
 
-  match '/about', to: 'landing_pages#view'
+  match '/renters', to:'landing_pages#renters'
 
-  match '/contact', to:'landing_pages#privacy'
+  match '/owners', to:'landing_pages#owners'
 
+  match '/how', to:'landing_pages#how'
+
+  match '/about', to:'landing_pages#about'
+  
 
   resources :listings
 
+  resources :offices
 
   resources :users
 
@@ -65,7 +67,7 @@ DemoApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'landing_pages#home'
 
   # See how all your routes lay out with "rake routes"
 

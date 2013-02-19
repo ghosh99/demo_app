@@ -1,34 +1,110 @@
 
-<div class="container-narrow">      
+<div class="container">      
 
-  <div class="jumbotron">
-    <h2>Share work space</h2>
-    <h3 class="lead">Tradewinz conects small businesses who want to share work space with other small businesses</h3>
-    <%= image_tag("tradewinz-spaces.png", alt: "tradewinz-spaces") %>
-   	<hr>    
-    <p>List the space you have to share. Its Free to list and rent.<p>
-    <%= link_to "LIST YOUR SPACE", new_office_path, class: "btn btn-large btn-success" %>	
+<!--ul class="nav nav-tabs">
+  <li class="active">
+    <a href="/home">I Have Work Space</a>
+  </li>
+  <li><a href="#">I Need Work Space</a></li>
+</ul-->
+
+<h1>Turn extra work space into extra income</h1>
+
+
+<div class="row" style="margin-top:20px">
+  <div class="span6">
+    <%= image_tag("studio1.jpg", class: "img-polaroid", alt: "studio rental") %>
+    <h5>$500 for a 300 sq. ft. studio in San Francisco, CA</h5>
+  </div>
+  
+  <div class="span6">
+  
+    <div class="row">
+      <div class="span1">
+        <img src="http://placehold.it/50x50" />
+      </div>
+      <div class="span5" style="font-size:18px">
+        Earn an average of $1000/month sharing your studio
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span1">
+        <img src="http://placehold.it/50x50" />
+      </div>
+      <div class="span5" style="font-size:18px">
+        You control the price-- and decide who can rent your studio
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span1">
+        <img src="http://placehold.it/50x50" />
+      </div>
+      <div class="span5" style="font-size:18px">
+         You set your studio's availability and approve requests that work for you
+      </div>
+    </div>
+
+      </div>
+      <div class="span4 offset1" style="margin-top">
+            <a href="<%= new_office_path%>"> 
+             <button class="btn btn-large btn-primary input-block-level"> Add Listing </button>
+           </a>
+      </div>
+    </div>
   </div>
 
-  <hr>
-  <div class="row-fluid marketing">
-    <h3> Recent Listings </h3>
-    <div class="span12">
-    	<% @listings = Office.all %>
-    	<% @listings.each do |listing| %>
-    	
-      	<h4><%= listing.title %></h4>
-      	<p><%= listing.description %></p>
-		<%= link_to 'View', listing %></td>
 
-		<% end %>          
-    </div> 
-    <div class="span12">
-    	<hr>
-        <%= link_to "View All", offices_path, class: "btn btn-medium" %>	
-	</div>
+</div>
+
+<div class="row" style="margin-top:20px">
+  <div class="span12">
+    <h2>Why list your space on Tradewinz?</h2>
+  </div>
+
+  <div class="span6 left">
+  <div class="row">
+   <div class="span1"> <img src="http://placehold.it/35x35" /></div>
+   <div class="span5">
+  <h4>No listing or membership fees</h4>
+   You get 100% of the rent. We are doing this to support small businesses in the USA. We succeed when you succeed.
+  </div>
+  
+  </div>
 
   </div>
+  <div class="span6 right">
+   <div class="row">
+   <div class="span1"> <img src="http://placehold.it/35x35" /></div>
+   <div class="span5">
+   <h4>Pre-screened and local business</h4>
+   We recuit and screen local, reliable applicants for you ... many of whom are like-minded entrepreneurs you may enjoy meeting.
+</div>
+</div>
+</div> 
+
+
+<div class="span6 left">
+  <div class="row">
+   <div class="span1"> <img src="http://placehold.it/35x35" /></div>
+   <div class="span5">
+  <h4>Intuit gurantee and protection</h4>
+   From the makers of Quickbooks and Turbo Tax - over 6M small businesses trust us to help with their finances.
+  </div>
+  </div>
+
+  </div>
+  <div class="span6 right">
+   <div class="row">
+   <div class="span1"> <img src="http://placehold.it/35x35" /></div>
+   <div class="span5">
+   <h4>Privacy and Security</h4>
+   You contact information is provate-you approve who can see it. You'll also get metrics to track how much interest your listing generates.
+</div>
+</div>
+</div> 
+</div>
+
 	
-
 </div> <!-- /container -->

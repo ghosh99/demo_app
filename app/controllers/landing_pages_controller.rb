@@ -2,9 +2,16 @@ class LandingPagesController < ApplicationController
   def home
   end
 
-  def privacy
+  def about
   end
 
-  def view
+  def renters
   end
+
+  def owners
+  end
+
+  def how
+  end
+
 end
