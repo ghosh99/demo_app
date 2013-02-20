@@ -1,13 +1,6 @@
 
 <div class="container">      
 
-<!--ul class="nav nav-tabs">
-  <li class="active">
-    <a href="/home">I Have Work Space</a>
-  </li>
-  <li><a href="#">I Need Work Space</a></li>
-</ul-->
-
 <h1>Turn extra work space into extra income</h1>
 
 
@@ -17,44 +10,23 @@
     <h5>$500 for a 300 sq. ft. studio in San Francisco, CA</h5>
   </div>
   
-  <div class="span6">
+  <div class="span6" style="text-align:center">
+    <h3> You provide the space. </h3>
+    <h3> We do the work. </h3>
+
+    <div class="span6" style="margin-top:20px">
+      <a href="<%= new_office_path%>"> 
+        <button class="btn btn-large btn-primary input-block-level"> Add Listing </button>
+      </a>
+    </div>
+    
+    <div class="span6" style="margin-top:20px">
+      <p>See <a href="#rentModal" data-toggle="modal">how much</a> you can earn.</p>
+    </div>
   
-    <div class="row">
-      <div class="span1">
-        <img src="http://placehold.it/50x50" />
-      </div>
-      <div class="span5" style="font-size:18px">
-        Earn an average of $1000/month sharing your studio
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="span1">
-        <img src="http://placehold.it/50x50" />
-      </div>
-      <div class="span5" style="font-size:18px">
-        You control the price-- and decide who can rent your studio
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="span1">
-        <img src="http://placehold.it/50x50" />
-      </div>
-      <div class="span5" style="font-size:18px">
-         You set your studio's availability and approve requests that work for you
-      </div>
-    </div>
-
-      </div>
-      <div class="span4 offset1" style="margin-top">
-            <a href="<%= new_office_path%>"> 
-             <button class="btn btn-large btn-primary input-block-level"> Add Listing </button>
-           </a>
-      </div>
-    </div>
   </div>
-
+    
+</div>
 
 </div>
 
@@ -106,5 +78,74 @@
 </div> 
 </div>
 
-	
+  
 </div> <!-- /container -->
+
+<!-- Modal -->
+<div id="rentModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="rentModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="rentModalLabel">Studio Rental Guide</h3>
+  </div>
+  <div class="modal-body">
+    <p>Find below the average rentals in different cities:</p>
+    <table class="table table-striped">  
+           <thead>  
+             <tr>  
+               <th>New York</th>  
+               <th>Los Angeles</th> 
+             </tr>  
+           </thead>  
+           <tbody>  
+             <tr>  
+               <td>$55 - $75 an hour</td>  
+          <td>$35 - $60 an hour</td>  
+             </tr>  
+             <tr>  
+               <td>$200 - $300 /half day (4-5 hrs) </td>   
+               <td>$200 - $250 /half day (4-5 hrs)</td>  
+             </tr>  
+             <tr>  
+               <td>$400 - $900 /full day (8-12 hrs) </td> 
+               <td>$450 – $600 /full day (8-12 hrs) </td>   
+             </tr>  
+           </tbody>  
+    </table>
+    <table class="table table-striped">  
+           <thead>  
+             <tr>  
+               <th>Chicago</th>  
+               <th>San Francisco</th> 
+             </tr>  
+           </thead>  
+           <tbody>  
+             <tr>  
+               <td>$55 - $75 an hour</td>  
+          <td>$35 - $60 an hour</td>  
+             </tr>  
+             <tr>  
+               <td>$200 - $300 /half day (4-5 hrs) </td>   
+               <td>$200 - $250 /half day (4-5 hrs)</td>  
+             </tr>  
+             <tr>  
+               <td>$400 - $900 /full day (8-12 hrs) </td> 
+               <td>$450 – $600 /full day (8-12 hrs) </td>   
+             </tr>  
+           </tbody>  
+    </table>
+    <p> Providing the following amenities may increase your rental rates:</p>
+    <ul>
+       <li>Location – downtowns, with their easy access via public transport, are more expensive than suburbs.</li>
+       <li>Equipment + accessories – Studio rentals that come with lights, umbrellas, veils, accessories and other specialized equipment rentals cost more.</li>
+      <li>Higher ceiling.</li>
+      <li>Freight elevators</li>
+      <li>Basic refreshments and water</li>
+      <li>Separate make-up room, dressing room and waiting areas.</li>
+      <li>Storage</li>
+       
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
