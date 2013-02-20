@@ -3,7 +3,7 @@ class OfficeMailer < ActionMailer::Base
   
   def listing_confirm(office)
   	@office = office
-  	mail(:to => office.contact_email, :subject => "Thank you for listing")
+  	mail(:to => office.contact_email, :subject => "Your listing was posted with tradewinz")
   end
 
 end

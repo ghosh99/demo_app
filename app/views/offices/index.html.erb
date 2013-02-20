@@ -7,7 +7,7 @@
   <div class="row search_result">
 
     <div class="span2">
-        <a href= "#">       
+        <a href= "<%= office_path(office)  %>" >
             <%= image_tag office.image1_url(:small).to_s, :class=> "img-polaroid", :size=> "114x74", :alt=> "Photo" %>
         </a>
     </div>
@@ -15,7 +15,9 @@
     <div class="span8">
         <%= link_to office.title, office %>
         <br>
-        <%= office.contact_name %>
+        by <%= office.company_name %>
+        <br>
+        at zipcode <%= office.loc_zip %>
     </div>
     
     <div class="span2"> 

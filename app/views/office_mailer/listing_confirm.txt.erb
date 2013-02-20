@@ -1,6 +1,18 @@
 <%= @office.contact_name %>,
 
-Thank you for listing your office with Tradewinz!
+Thanks for using tradewinz to share your studio!
 
-<%= link_to 'View your listing', office_url(@office) %>
-<%= link_to "Edit your listing", edit_office_url(@office) %>
+We’ll notify you as soon as someone requests your studio – and we’ll highlight the folks that seem to best match your listing criteria.
+
+We’ll also send you a weekly report on how many people review your listing, so you can assess how much interest there is.
+
+As part of our commitment to trust and privacy on the site, we will not release any contact information until you tell us that you’d like to communicate with the requestor.
+
+If you want to see your listing, <%= link_to 'click here to View', office_url(@office) %></p>
+
+If you want to update your listing, <%= link_to "click here to Edit", edit_office_url(@office) %></p>
+
+Cheers,
+The tradewinz team
+
+P.S. If you have any concerns or questions, please reply to the <a href="mailto:tradewinz@intuit.com?subject=Feedback">tradewinz team</a> and let us know.
