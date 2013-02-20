@@ -1,15 +1,5 @@
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Rent:</b>
-  <%= @office.rent %>
-</p>
-
-<p>
-  <b>Size:</b>
-  <%= @office.size %>
-</p>
+<h1 id="notice"><%= notice %></h1>
 
 <p>
   <b>Title:</b>
@@ -17,39 +7,60 @@
 </p>
 
 <p>
+  <b>Size:</b>
+  <%= @office.size %> sq.ft.
+</p>
+
+<p>
+  <b>Zip Code:</b>
+  <%= @office.loc_zip %>
+</p>
+
+
+<p>
   <b>Description:</b>
   <%= @office.description %>
 </p>
 
+
 <p>
-  <b>Availability:</b>
-  <%= @office.availability %>
+  <b>Rent $:</b>
+  <%= @office.rent %>
 </p>
-
-
 <p>
-  <b>Room Photo:</b>
-  <%= image_tag @office.image1_url.to_s, alt: "Photo" %>
-</p>
-
-<p>
-  <b>Insurance:</b>
-  <%= @office.insurance %>
-</p>
-
-<p>
-  <b>Swap:</b>
+  <b>Swap places ?</b>
   <%= @office.swap %>
 </p>
 
 <p>
-  <b>Contact picture:</b>
-  <%= image_tag @office.contact_picture_url(:medium).to_s, alt: "Picture" %>
+  <b>Availability:</b>
+  <%= @office.available %>
+</p>
+
+
+<p>
+  <b>Photo:</b>
+  <%= image_tag @office.image1_url.to_s, alt: "Photo" %>
+</p>
+
+<p>
+  <b>Requires Liability Insurance ?</b>
+  <%= @office.insurance %>
+</p>
+
+<p>
+  <b>Owner On-site  ?</b>
+  <%= @office.insurance %>
 </p>
 
 <p>
   <b>Company name:</b>
-  <%= @office.contact_name %>
+  <%= @office.company_name %>
+</p>
+
+<p>
+  <b>Years in business:</b>
+  <%= @office.years %>
 </p>
 
 <p>
@@ -62,22 +73,14 @@
   <%= @office.company_url %>
 </p>
 
-<p>
-  <b>Years in business:</b>
-  <%= @office.years %>
-</p>
 
 <br>
 
-<h4>If you are interested in this listing, please contact the 
+<h4>If you are interested in this listing, please contact
    <a href="mailto:tradewinz@intuit.com?subject=Interested in renting" class="btn-link">Tradewinz team</a>
 </h4>
 
 
-<br>
-<%= link_to 'Edit', edit_office_path(@office) %> |
-<%= link_to 'Back', offices_path %>
-<br>
-<hr> 
+<hr>
 
 <%= link_to "View all listings", offices_path, class: "btn btn-medium" %>

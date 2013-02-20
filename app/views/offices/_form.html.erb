@@ -26,57 +26,53 @@
           </div>
 
           <div class="control-group">
-            <label class="control-label"> <%= f.label :size %> </label>
+            <label class="control-label">Size </label>
             <div class="controls"> <%= f.text_field :size %> sq. ft. </div>
           </div>
-          
 
-
-          
           <div class="control-group">
-            <label class="control-label"> <%= f.label :description %> </label>
+            <label class="control-label">Zipcode</label>
+            <div class="controls"> <%= f.text_field :loc_zip %> </div>
+           </div>
+
+          <div class="control-group">
+            <label class="control-label">Accomodates</label>
+            <div class="controls">  <%= f.number_field :accomodate %>  </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Description </label>
             <div class="controls"> <%= f.text_area :description %> </div>
           </div>
 
 
-
           <div class="control-group">
-            <label class="control-label">Upload a photo</label>
+            <label class="control-label">Upload a Photo</label>
             <div class="controls"> <%= f.file_field :image1 %> </div>
           </div>
 
-          <div class="control-group">
-            <label class="control-label">Options </label>
-            <div class="controls">
-              <div class="row">
-                <div class="span6">
-                  <%= f.check_box :insurance %>
-                  <label class="control-label">Liability insurance?  </label>
-                </div>
-                <div class="span6">
-                  <%= f.check_box :swap %>
-                  <label class="control-label">Swap places?  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--div class="field">
-            <%= f.label :image2 %><br />
-            <%= f.text_field :image2 %>
-          </div>
-          <div class="field">
-            <%= f.label :image3 %><br />
-            <%= f.text_field :image3 %>
-          </div>
-          <div class="field">
-            <%= f.label :image4 %><br />
-            <%= f.text_field :image4 %>
-          </div-->
 
         <div class="control-group">
-          <label class="control-label"> Rent </label>
+          <label class="control-label">Rent $</label>
           <div class="controls"> <%= f.text_field :rent %> </div>
+          <label class="control-label">Swap places? </label>
+          <div class="controls"> <%= f.check_box :swap %> </div>
+
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Availability</label>
+          <div class="controls"> <%= f.text_area :available %> </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Require Insurance?</label>
+          <div class="controls"><%= f.check_box :insurance %> </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Owner on-site?</label>
+          <div class="controls"><%= f.check_box :on_site %> </div>
         </div>
 
       </fieldset> 
@@ -91,23 +87,26 @@
       <fieldset class="padtop">
         <div class="control-group">
           <label class="control-label">Company Name </label>
-          <div class="controls"> <%= f.text_field :contact_name %> </div>
+          <div class="controls"> <%= f.text_field :company_name %> </div>
         </div>
 
         <div class="control-group">
-          <label class="control-label">Company Details </label>
+          <label class="control-label">Years in Business </label>
+          <div class="controls"> <%= f.number_field :years %></div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Describe Yourself </label>
           <div class="controls"> <%= f.text_area :company_desc %> </div>
         </div>
+
 
         <div class="control-group">
           <label class="control-label">Company Website </label>
           <div class="controls"> <%= f.text_field :company_url %> </div>
         </div>
 
-        <div class="control-group">
-          <label class="control-label">Years in business </label>
-          <div class="controls"> <%= f.number_field :years %></div>
-        </div>
+
        </fieldset>
         
 
@@ -119,15 +118,42 @@
         </div>
 
         <fieldset class="padtop">
-            <div class="control-group">
-              <label class="control-label">Email address </label>
-              <div class="controls"> <%= f.text_field :contact_email %> </div>
-            </div>
+          <div class="control-group">
+             <label class="control-label">Your Name </label>
+             <div class="controls"> <%= f.text_field :contact_name %> </div>
+          </div>
 
-            <div class="control-group">
-              <label class="control-label">Phone Number </label>
-              <div class="controls"> <%= f.text_field :contact_phone %> </div>
-            </div>
+
+          <div class="control-group">
+            <label class="control-label">Location Address1 </label>
+            <div class="controls"> <%= f.text_field :loc_addr1 %> </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Location Address2 </label>
+            <div class="controls"> <%= f.text_field :loc_addr2 %> </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">City</label>
+            <div class="controls"> <%= f.text_field :loc_city %> </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">State</label>
+            <div class="controls"> <%= f.text_field :loc_state %> </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">Email (Required) </label>
+            <div class="controls"> <%= f.text_field :contact_email %> </div>
+          </div>
+
+           <div class="control-group">
+            <label class="control-label">Phone Number </label>
+            <div class="controls"> <%= f.text_field :contact_phone %> </div>
+           </div>
+
       </fieldset>
 
       <div class="panel-header-gray">
