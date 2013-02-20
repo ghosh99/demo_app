@@ -12,12 +12,10 @@
         </a>
     </div>
 
-    <div class="span1">
-        <%= image_tag office.contact_picture_url(:thumb).to_s, :class=> "img-rounded", :size=>"36x36", alt: "Picture" %>
-    </div>
-
-    <div class="span7"> 
-        <%= link_to office.title, office %>        
+    <div class="span8">
+        <%= link_to office.title, office %>
+        <br>
+        <%= office.contact_name %>
     </div>
     
     <div class="span2"> 
