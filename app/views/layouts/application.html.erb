@@ -29,7 +29,7 @@
             <ul class="nav nav-pills pull-right">
                 <li><%= link_to "Home", home_path %></li>
                 <li><%= link_to "Listings", offices_path %> </li>
-                <li><%= link_to "List your Space", owners_path%> </li>
+                <li><%= link_to "List your Studio", owners_path%> </li>
                 <li><%= link_to "How it Works", how_path %></li>
                 <li><%= link_to "About Us", about_path %> </li>
             </ul>
@@ -65,7 +65,7 @@
 <!-- begin Google Analytics code -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-38317420-1']);
+  _gaq.push(['_setAccount', 'UA-38308750-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -74,6 +74,7 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+
 <!-- end GA code -->
 
 <!-- begin SnapEngage code -->
@@ -86,7 +87,35 @@
 </script>
 <!-- end SnapEngage code -->
 
+<!-- jQquery validation -->
+<script type="text/javascript">
+    $("#saveListingBtn").click(function() {
+        $("#new_office").validate({
+            rules: {
+                "office[contact_email]": {required: true, email: true},
+                "office[title]": {required: true}
+            },
+            messages: {
+                "office[contact_email]": "Please provide a valid email",
+                "office[title]": "Please provide a title for your listing"
+            },
+            errorPlacement: function(error, element) {
+                element.after(error);
+                element.css('border', 'solid red 2px');
+            }
+        });
+        _gaq.push(['_trackEvent', 'SaveListing', 'User saves a listing']);
+    });
 
+    $("#newListingBtn").click(function() {
+        _gaq.push(['_trackEvent', 'NewListing', 'User clicks on Add Listing']);
+    });
+
+    $("#seeListingBtn").click(function() {
+        _gaq.push(['_trackEvent', 'SeeListings', 'User clicks on See Listing']);
+    });
+
+</script>
 
 </body>
 

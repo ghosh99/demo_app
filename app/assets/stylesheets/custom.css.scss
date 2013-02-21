@@ -43,6 +43,7 @@ color: #000000;
 font-size: 15px;
 line-height: 24px;
 background-color: #faf8f6;
+border-top: 6px solid #fabb0f;
 }
 
 .nav {
@@ -136,7 +137,10 @@ padding: 10px 16px;
 text-transform: uppercase;
 font-family: "Open Sans", "Helvetica Neue", Helvetica, Ariel, sans-serif;
 font-weight: 300;
+font-size: 14px;
 }
 
-
+.error {
+  color: red;
+}
 

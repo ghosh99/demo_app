@@ -22,11 +22,11 @@ DemoApp::Application.configure do
 
   # Use gmail smtp service for now
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = false
+  config.action_mailer.perform_deliveries = true
   # specify what domain to use for mailer URLs
   config.action_mailer.default_url_options = { host: "www.tradewinz.net" }
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = false
   
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH

@@ -30,3 +30,6 @@ gem "mini_magick"
 gem "fog", "~> 1.3.1"
 
 gem "carrierwave"
+
+gem "jquery-validation-rails"
+
