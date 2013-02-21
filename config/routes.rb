@@ -11,11 +11,11 @@ DemoApp::Application.routes.draw do
   match '/about', to:'landing_pages#about'
   
 
-  resources :listings
+  # resources :listings
 
   resources :offices
 
-  resources :users
+  # resources :users
 
 
   # The priority is based upon order of creation:

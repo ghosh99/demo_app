@@ -13,7 +13,7 @@
 
     <div class="well panel-border">
       <div class="panel-header-gray">
-        <h3> About your work space (Public) </h3>
+        <h3> About your work space </h3>
         <p> Tell potential colleagues why they would want to work in your space.</p>
         <p>Highlight what makes it productive and convenient.</p>
       </div>
@@ -25,22 +25,22 @@
           </div>
 
           <div class="control-group">
-            <label class="control-label">Size </label>
+            <label class="control-label">Size</label>
             <div class="controls"> <%= f.text_field :size %> sq. ft. </div>
           </div>
 
           <div class="control-group">
-            <label class="control-label">Zipcode</label>
+            <label class="control-label">Zip Code</label>
             <div class="controls"> <%= f.text_field :loc_zip %> </div>
            </div>
 
           <div class="control-group">
-            <label class="control-label">Accomodates</label>
+            <label class="control-label">Accommodates</label>
             <div class="controls">  <%= f.number_field :accomodate %>  </div>
           </div>
 
           <div class="control-group">
-            <label class="control-label">Description </label>
+            <label class="control-label">Description</label>
             <div class="controls"> <%= f.text_area :description %> </div>
           </div>
 
@@ -54,7 +54,7 @@
         <div class="control-group">
           <label class="control-label">Rent $</label>
           <div class="controls"> <%= f.text_field :rent %> </div>
-          <label class="control-label">Swap places? </label>
+          <label class="control-label">Swap OK? </label>
           <div class="controls"> <%= f.check_box :swap %> </div>
 
         </div>
@@ -70,14 +70,14 @@
         </div>
 
         <div class="control-group">
-          <label class="control-label">Someone on-site?</label>
+          <label class="control-label">Someone On-Site?</label>
           <div class="controls"><%= f.check_box :on_site %> </div>
         </div>
 
       </fieldset> 
 
       <div class="panel-header-gray">
-        <h3> About You (Private) </h3>
+        <h3> About You </h3>
         <p> Tradewinz creates trusted, reliable business connections.
           Help other people get to know you.
         </p>
@@ -111,8 +111,9 @@
 
 
         <div class="panel-header-gray">
-          <h3> Shown only to confirmed tenants</h3>
-          <p> To protect your privacy, we hide your address, phone number, and contact information from people that have not confirmed a reservation with you
+          <h3> Your Contact Information (Private) </h3>
+          <p> Tradewinz helps you screen potential guests and prevents spam.
+            We won't release your contact information without your approval.
           </p>
         </div>
 

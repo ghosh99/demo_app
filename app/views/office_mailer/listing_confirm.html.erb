@@ -11,9 +11,7 @@
   As part of our commitment to trust and privacy on the site, we will not release any contact information until
   you tell us that you’d like to communicate with the requestor.
 </p>
-<p>If you want to see your listing, <%= link_to 'click here to view', office_url(@office) %></p>
-
-<p>If you want to update your listing, <%= link_to "click here to edit", edit_office_url(@office) %></p>
+<p>Click <%= link_to 'View', office_url(@office) %> to see your listing, or <%= link_to "Edit", edit_office_url(@office) %> to update your listing</p>
 
 <p>
   Cheers,<br>
@@ -21,7 +19,6 @@
 </p>
 
 <p>
-  P.S. If you have any concerns or questions, please reply to the
-  <a href="mailto:tradewinz@intuit.com?subject=Question about my listing">tradewinz team</a>
-  and let us know.
+  P.S. If you have any concerns or questions, please email us at
+  <a href="mailto:tradewinz@intuit.com?subject=Inquiry">tradewinz@intuit.com</a>
 </p>
