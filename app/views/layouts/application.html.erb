@@ -8,6 +8,9 @@
   
   <title>Tradewinz</title>
 
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -21,33 +24,41 @@
 
 <body>
 <div class = "container">
-	<div class="masthead">
-        <ul class="nav nav-pills pull-right">
-          <li> <%= link_to "Home", home_path %></li>
-          <li><%= link_to "See Listings", offices_path %> </li>
-
-          <li><%= link_to "List your Space", owners_path%> </li>
-          <li><%= link_to "How it Works", how_path %> </li>
-          <li><%= link_to "About Us", about_path %> </li>
-        </ul>
-        <a href="/home">
-          <h3 class="muted">
-            <%= image_tag("logo.png", alt: "tradewinz logo") %>
-          </h3>
-        </a>
-
-  </div>
-  <hr>    
+	<div class="row" style="height: 60px; margin-right: -20px;">
+    <div class="span12">
+            <ul class="nav nav-pills pull-right">
+                <li> <a href="/home">Home</a></li>
+                <li><a href="/offices">Listings</a> </li>
+                <li><a href="/owners">List your Space</a> </li>
+                <li><a href="/how">How it Works</a> </li>
+                <li><a href="/about">About Us</a> </li>
+            </ul>
+            <a href="/home">
+                <h3 class="muted" style="margin-top: 12px;">
+                  <img alt="tradewinz logo" src="/assets/logo-ba32846ce648189962290fe00515bcb8.png">
+                </h3>
+            </a>
+    </div>
+  </div> 
 
   <%= yield %>
 
-  <hr>
-	<div class="footer">
+	<!--div class="footer">
       <p>&copy; Intuit, Inc. All rights reserved
         <a href="http://security.intuit.com/privacy/">Privacy Policy</a>
       </p>
 
-	</div>
+	</div-->
+
+  <div class="row" style="border-top: 4px solid #fabb0f; margin-right: -20px;">
+    <div class="span12" style="margin-bottom: 30px; padding-top: 24px;">
+      <p>© Intuit, Inc. All rights reserved
+        <a href="http://security.intuit.com/privacy/">Privacy Policy</a>
+      </p>
+    </div>
+  </div>
+
+
 
 </div>
 

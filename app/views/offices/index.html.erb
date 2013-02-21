@@ -12,14 +12,16 @@
         </a>
     </div>
 
-    <div class="span8">
+    <div class="span6">
         <%= link_to office.title, office %>
-        <br>
-        by <%= office.company_name %>
-        <br>
-        at zipcode <%= office.loc_zip %>
     </div>
-    
+
+    <div class="span2">
+      <%= office.loc_city %> <%= office.loc_state %>
+    </div>
+
+
+
     <div class="span2"> 
         $ <%= office.rent %> 
     </div>
