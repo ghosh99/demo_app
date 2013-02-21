@@ -1,24 +1,28 @@
 
-<h1 id="notice"><%= notice %></h1>
+<h2 id="notice"><%= notice %></h2>
 
 <p>
-  <b>Title:</b>
+  <b>Title: </b>
   <%= @office.title %>
 </p>
 
 <p>
-  <b>Size:</b>
+  <b>Size: </b>
   <%= @office.size %> sq.ft.
 </p>
 
 <p>
-  <b>Zip Code:</b>
+  <b>Zip Code: </b>
   <%= @office.loc_zip %>
 </p>
 
+<p>
+  <b>Accommodates: </b>
+  <%= @office.accomodate %>
+</p>
 
 <p>
-  <b>Description:</b>
+  <b>Description: </b>
   <%= @office.description %>
 </p>
 
@@ -28,28 +32,28 @@
   <%= @office.rent %>
 </p>
 <p>
-  <b>Swap places ?</b>
+  <b>Swap OK ? </b>
   <%= @office.swap %>
 </p>
 
 <p>
-  <b>Availability:</b>
+  <b>Availability: </b>
   <%= @office.available %>
 </p>
 
 
 <p>
-  <b>Photo:</b>
+  <b>Photo: </b>
   <%= image_tag @office.image1_url.to_s, alt: "Photo" %>
 </p>
 
 <p>
-  <b>Requires Liability Insurance ?</b>
+  <b>Require Liability Insurance ?: </b>
   <%= @office.insurance %>
 </p>
 
 <p>
-  <b>Owner On-site  ?</b>
+  <b>Someone On-Site?: </b>
   <%= @office.insurance %>
 </p>
 
@@ -64,7 +68,7 @@
 </p>
 
 <p>
-  <b>Company desc:</b>
+  <b>Owner description:</b>
   <%= @office.company_desc %>
 </p>
 
