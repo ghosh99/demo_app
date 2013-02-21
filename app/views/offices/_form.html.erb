@@ -3,13 +3,12 @@
       <% if @office.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@office.errors.count, "error") %> prohibited this listing from being saved:</h2>
-
-          <ul>
+          <ul style="margin-left:10;">
           <% @office.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
           <% end %>
           </ul>
-        </div>
+          </div>
       <% end %>
 
     <div class="well panel-border">
@@ -21,7 +20,7 @@
       <fieldset class="padtop">
 
           <div class="control-group">
-            <label class="control-label">Title(Required) </label>
+            <label class="control-label"> <strong>Title</strong> (Required) </label>
             <div class="controls"> <%= f.text_field :title %> </div>
           </div>
 
@@ -145,7 +144,7 @@
           </div>
 
           <div class="control-group">
-            <label class="control-label">Email (Required) </label>
+            <label class="control-label"><strong>Email</strong> (Required) </label>
             <div class="controls"> <%= f.text_field :contact_email %> </div>
           </div>
 

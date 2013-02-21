@@ -27,15 +27,15 @@
 	<div class="row" style="height: 60px; margin-right: -20px;">
     <div class="span12">
             <ul class="nav nav-pills pull-right">
-                <li> <a href="/home">Home</a></li>
-                <li><a href="/offices">Listings</a> </li>
-                <li><a href="/owners">List your Space</a> </li>
-                <li><a href="/how">How it Works</a> </li>
-                <li><a href="/about">About Us</a> </li>
+                <li><%= link_to "Home", home_path %></li>
+                <li><%= link_to "Listings", offices_path %> </li>
+                <li><%= link_to "List your Space", owners_path%> </li>
+                <li><%= link_to "How it Works", how_path %></li>
+                <li><%= link_to "About Us", about_path %> </li>
             </ul>
             <a href="/home">
                 <h3 class="muted" style="margin-top: 12px;">
-                  <img alt="tradewinz logo" src="/assets/logo-ba32846ce648189962290fe00515bcb8.png">
+                  <%= image_tag("logo.png", alt: "tradewinz logo") %>
                 </h3>
             </a>
     </div>
