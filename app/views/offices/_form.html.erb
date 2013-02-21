@@ -13,9 +13,10 @@
 
     <div class="well panel-border">
       <div class="panel-header-gray">
-        <h3> About your work space </h3>
-        <p> Tell potential colleagues why they would want to work in your space.</p>
-        <p>Highlight what makes it productive and convenient.</p>
+        <h3> About your studio </h3>
+        <p> Tell potential colleagues why they would want to work in your space.
+          Highlight what makes it productive and <br> convenient - including equipment, storage, parking,
+          kitchen and more.</p>
       </div>
       <fieldset class="padtop">
 
@@ -70,13 +71,13 @@
         </div>
 
         <div class="control-group">
-          <label class="control-label">Require Insurance?</label>
-          <div class="controls"><%= f.check_box :insurance %> </div>
+          <label class="control-label">Options</label>
+          <div class="controls"><%= f.check_box :insurance %> Renter must have liability insurance </div>
         </div>
 
         <div class="control-group">
-          <label class="control-label">Someone On-Site?</label>
-          <div class="controls"><%= f.check_box :on_site %> </div>
+          <label class="control-label"></label>
+          <div class="controls"><%= f.check_box :on_site %> I/someone will be on-site</div>
         </div>
 
       </fieldset> 
