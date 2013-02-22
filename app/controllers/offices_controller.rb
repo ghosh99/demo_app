@@ -45,10 +45,10 @@ class OfficesController < ApplicationController
 
     respond_to do |format|
       if @office.save
-        # send email to user on successful office create
-        OfficeMailer.listing_confirm(@office).deliver
+        # send email to user and us on successful listing create
+        OfficeMailer.add_listing_confirm(@office).deliver
 
-        format.html { redirect_to @office, notice: 'Office was successfully created.' }
+        format.html { redirect_to @office, notice: 'Studio was successfully created.' }
         format.json { render json: @office, status: :created, location: @office }
       else
         format.html { render action: "new" }
@@ -64,7 +64,10 @@ class OfficesController < ApplicationController
 
     respond_to do |format|
       if @office.update_attributes(params[:office])
-        format.html { redirect_to @office, notice: 'Office was successfully updated.' }
+        # send email to us on successful listing edit
+        OfficeMailer.edit_listing_confirm(@office).deliver
+
+        format.html { redirect_to @office, notice: 'Studio was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
