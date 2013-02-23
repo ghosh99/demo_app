@@ -21,6 +21,11 @@
           <%= office.loc_city %> <%= office.loc_state %>
         </div>
 
+        <div>
+            <%= link_to 'Edit', edit_office_path(office) %>
+            <%= link_to 'Destroy', office, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+
       </div>
 
     <% end %>
