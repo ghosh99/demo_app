@@ -2,80 +2,88 @@
 <h2 id="notice"><%= notice %></h2>
 
 <p>
-  <b>Title: </b>
+  <b>Title : </b>
   <%= @office.title %>
 </p>
 
 <p>
-  <b>Size: </b>
+  <b>Size : </b>
   <%= @office.size %> sq.ft.
 </p>
 
 <p>
-  <b>Location City: </b>
+  <b>Location City : </b>
   <%= @office.loc_city %>
 </p>
 
 <p>
-  <b>Location State: </b>
+  <b>Location State : </b>
   <%= @office.loc_state %>
 </p>
 
 
 <p>
-  <b>Accommodates: </b>
+  <b>Accommodates : </b>
   <%= @office.accomodate %>
 </p>
 
 <p>
-  <b>Description: </b>
-  <%= @office.description %>
+  <b>Description : </b>
+  <%= @office.description.gsub("\n", "<br>").html_safe %>
 </p>
 
 
 <p>
-  <b>Rent and Availability: </b>
-  <%= @office.available %>
+  <b>Rent and Availability : </b>
+  <%= @office.available.gsub("\n", "<br>").html_safe %>
 </p>
 
 
 <p>
-  <b>Photo: </b>
+  <b>Photo : </b>
   <%= image_tag @office.image1_url.to_s, alt: "Photo" %>
 </p>
 
 <p>
-  <b>Require Liability Insurance ? </b>
-  <%= @office.insurance %>
+  <b>Require Liability Insurance : </b>
+  <% if @office.insurance %>Yes
+  <% else %>No
+  <% end %>
 </p>
 
 <p>
-  <b>Someone On-Site? </b>
-  <%= @office.insurance %>
+  <b>Someone On-Site : </b>
+  <% if @office.insurance %>Yes
+  <% else %>No
+  <% end %>
+
 </p>
 
 <p>
-  <b>Swap OK ? </b>
-  <%= @office.swap %>
+  <b>Swap OK : </b>
+  <% if @office.swap %>Yes
+  <% else %>No
+  <% end %>
+
 </p>
 
 <p>
-  <b>Company name:</b>
+  <b>Company name : </b>
   <%= @office.company_name %>
 </p>
 
 <p>
-  <b>Years in business:</b>
+  <b>Years in business : </b>
   <%= @office.years %>
 </p>
 
 <p>
-  <b>Owner description:</b>
-  <%= @office.company_desc %>
+  <b>Owner description : </b>
+  <%= @office.company_desc.gsub("\n", "<br>").html_safe %>
 </p>
 
 <p>
-  <b>Company website:</b>
+  <b>Company website : </b>
   <%= @office.company_url %>
 </p>
 
